@@ -38,3 +38,6 @@ Integrate analytics dashboards to help admins monitor sales trends, revenue, and
 
 7. Cross-Platform Availability:
 Ensure seamless functionality on both Android and iOS using Flutter’s unified codebase.
+
+Video for week 2 for app naviagtion:
+https://drive.google.com/file/d/1uQdILZCRxpEHaiQIjltXQwJDOi6chaWT/view?usp=sharing
