@@ -1,30 +1,25 @@
+import 'package:excelerate_learning_app/app/bindings/initial_bindings.dart';
+import 'package:excelerate_learning_app/app/constants/app_constants.dart';
+import 'package:excelerate_learning_app/app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'app/bindings/initial_bindings.dart';
 import 'app/routes/app_pages.dart';
-import 'app/constants/app_constants.dart';
-import 'app/routes/app_routes.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  InitialBindings().dependencies();
-  runApp(const ExcelerateApp());
+  InitialBindings().dependencies(); // Initial GetX controllers
+  runApp(MyApp());
 }
 
-class ExcelerateApp extends StatelessWidget {
-  const ExcelerateApp({Key? key}) : super(key: key);
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: AppConstants.appName,
       debugShowCheckedModeBanner: false,
-      initialRoute: Routes.HOME,
+      initialRoute: Routes.LOGIN,
       getPages: AppPages.pages,
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-        brightness: Brightness.light,
-      ),
     );
   }
 }
+
