@@ -1,0 +1,9 @@
+[
+  {"id":"l1","programId":"1","title":"Introduction to Web Development","description":"Overview of modern web technologies and tools","duration":"45 min","order":1},
+  {"id":"l2","programId":"1","title":"HTML & CSS Fundamentals","description":"Building blocks of web pages","duration":"60 min","order":2},
+  {"id":"l3","programId":"1","title":"JavaScript Essentials","description":"Core JavaScript concepts and ES6+","duration":"90 min","order":3},
+  {"id":"l4","programId":"1","title":"React Basics","description":"Components, props, and state","duration":"75 min","order":4},
+  {"id":"l7","programId":"2","title":"Digital Marketing Overview","description":"Understanding the digital landscape","duration":"40 min","order":1},
+  {"id":"l8","programId":"2","title":"Content Marketing Strategy","description":"Creating valuable content that converts","duration":"55 min","order":2},
+  {"id":"l11","programId":"4","title":"Introduction to UX Design","description":"User-centered design principles","duration":"50 min","order":1}
+]
