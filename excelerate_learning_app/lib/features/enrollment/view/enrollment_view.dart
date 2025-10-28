@@ -1,5 +1,5 @@
-import 'package:excelerate_learning_app/features/enrollment/view%20model/enrollment_view_model.dart';
-import 'package:excelerate_learning_app/features/programs/view%20model/program_view_model.dart';
+import 'package:excelerate_learning_app/features/enrollment/view_model/enrollment_view_model.dart';
+import 'package:excelerate_learning_app/features/programs/view_model/program_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

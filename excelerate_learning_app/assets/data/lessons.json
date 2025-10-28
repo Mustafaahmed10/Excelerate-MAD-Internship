@@ -1,9 +1,226 @@
 [
-  {"id":"l1","programId":"1","title":"Introduction to Web Development","description":"Overview of modern web technologies and tools","duration":"45 min","order":1},
-  {"id":"l2","programId":"1","title":"HTML & CSS Fundamentals","description":"Building blocks of web pages","duration":"60 min","order":2},
-  {"id":"l3","programId":"1","title":"JavaScript Essentials","description":"Core JavaScript concepts and ES6+","duration":"90 min","order":3},
-  {"id":"l4","programId":"1","title":"React Basics","description":"Components, props, and state","duration":"75 min","order":4},
-  {"id":"l7","programId":"2","title":"Digital Marketing Overview","description":"Understanding the digital landscape","duration":"40 min","order":1},
-  {"id":"l8","programId":"2","title":"Content Marketing Strategy","description":"Creating valuable content that converts","duration":"55 min","order":2},
-  {"id":"l11","programId":"4","title":"Introduction to UX Design","description":"User-centered design principles","duration":"50 min","order":1}
+  {
+    "id": "l1",
+    "programId": "1",
+    "title": "Introduction to Web Development",
+    "description": "Overview of modern web technologies and tools",
+    "duration": "45 min",
+    "order": 1
+  },
+  {
+    "id": "l2",
+    "programId": "1",
+    "title": "HTML & CSS Fundamentals",
+    "description": "Building blocks of web pages",
+    "duration": "60 min",
+    "order": 2
+  },
+  {
+    "id": "l3",
+    "programId": "1",
+    "title": "JavaScript Essentials",
+    "description": "Core JavaScript concepts and ES6+",
+    "duration": "90 min",
+    "order": 3
+  },
+  {
+    "id": "l4",
+    "programId": "1",
+    "title": "React Basics",
+    "description": "Components, props, and state",
+    "duration": "75 min",
+    "order": 4
+  },
+  {
+    "id": "l5",
+    "programId": "1",
+    "title": "React Hooks Deep Dive",
+    "description": "useState, useEffect, and custom hooks",
+    "duration": "80 min",
+    "order": 5
+  },
+  {
+    "id": "l6",
+    "programId": "1",
+    "title": "Building a Complete React App",
+    "description": "Project: Task management application",
+    "duration": "120 min",
+    "order": 6
+  },
+  {
+    "id": "l7",
+    "programId": "2",
+    "title": "Digital Marketing Overview",
+    "description": "Understanding the digital landscape",
+    "duration": "40 min",
+    "order": 1
+  },
+  {
+    "id": "l8",
+    "programId": "2",
+    "title": "Content Marketing Strategy",
+    "description": "Creating valuable content that converts",
+    "duration": "55 min",
+    "order": 2
+  },
+  {
+    "id": "l9",
+    "programId": "2",
+    "title": "Social Media Marketing",
+    "description": "Facebook, Instagram, LinkedIn strategies",
+    "duration": "65 min",
+    "order": 3
+  },
+  {
+    "id": "l10",
+    "programId": "2",
+    "title": "SEO Fundamentals",
+    "description": "Optimize for search engines",
+    "duration": "70 min",
+    "order": 4
+  },
+  {
+    "id": "l11",
+    "programId": "4",
+    "title": "Introduction to UX Design",
+    "description": "User-centered design principles",
+    "duration": "50 min",
+    "order": 1
+  },
+  {
+    "id": "l12",
+    "programId": "4",
+    "title": "User Research Methods",
+    "description": "Interviews, surveys, and personas",
+    "duration": "60 min",
+    "order": 2
+  },
+  {
+    "id": "l13",
+    "programId": "4",
+    "title": "Wireframing & Prototyping",
+    "description": "From sketches to interactive prototypes",
+    "duration": "75 min",
+    "order": 3
+  },
+  {
+    "id": "l14",
+    "programId": "4",
+    "title": "Visual Design Principles",
+    "description": "Color, typography, and layout",
+    "duration": "65 min",
+    "order": 4
+  },
+  {
+    "id": "l15",
+    "programId": "3",
+    "title": "Introduction to Data Science",
+    "description": "Understanding the data science lifecycle and tools",
+    "duration": "50 min",
+    "order": 1
+  },
+  {
+    "id": "l16",
+    "programId": "3",
+    "title": "Python for Data Analysis",
+    "description": "Using Pandas, NumPy, and Matplotlib",
+    "duration": "80 min",
+    "order": 2
+  },
+  {
+    "id": "l17",
+    "programId": "3",
+    "title": "Data Visualization Techniques",
+    "description": "Creating clear and effective data visualizations",
+    "duration": "70 min",
+    "order": 3
+  },
+  {
+    "id": "l18",
+    "programId": "3",
+    "title": "Machine Learning Basics",
+    "description": "Supervised and unsupervised learning fundamentals",
+    "duration": "90 min",
+    "order": 4
+  },
+  {
+    "id": "l19",
+    "programId": "3",
+    "title": "Capstone Project: Predictive Modeling",
+    "description": "Build and evaluate a predictive ML model",
+    "duration": "120 min",
+    "order": 5
+  },
+  {
+    "id": "l20",
+    "programId": "5",
+    "title": "Introduction to Business Analytics",
+    "description": "Overview of business data analysis and intelligence concepts",
+    "duration": "45 min",
+    "order": 1
+  },
+  {
+    "id": "l21",
+    "programId": "5",
+    "title": "Advanced Excel Techniques",
+    "description": "Data cleaning, pivot tables, and formula mastery",
+    "duration": "70 min",
+    "order": 2
+  },
+  {
+    "id": "l22",
+    "programId": "5",
+    "title": "Power BI Dashboards",
+    "description": "Creating visual dashboards for business insights",
+    "duration": "90 min",
+    "order": 3
+  },
+  {
+    "id": "l23",
+    "programId": "5",
+    "title": "Data-Driven Decision Making",
+    "description": "Leveraging analytics for business strategy",
+    "duration": "60 min",
+    "order": 4
+  },
+  {
+    "id": "l24",
+    "programId": "6",
+    "title": "Introduction to Mobile App Development",
+    "description": "Understanding cross-platform development concepts",
+    "duration": "50 min",
+    "order": 1
+  },
+  {
+    "id": "l25",
+    "programId": "6",
+    "title": "React Native Fundamentals",
+    "description": "Setting up your environment and building UI components",
+    "duration": "75 min",
+    "order": 2
+  },
+  {
+    "id": "l26",
+    "programId": "6",
+    "title": "Navigation and State Management",
+    "description": "Implementing navigation and managing app state effectively",
+    "duration": "90 min",
+    "order": 3
+  },
+  {
+    "id": "l27",
+    "programId": "6",
+    "title": "Connecting to APIs and Databases",
+    "description": "Fetching data and using persistent storage",
+    "duration": "80 min",
+    "order": 4
+  },
+  {
+    "id": "l28",
+    "programId": "6",
+    "title": "Publishing Your App",
+    "description": "Preparing and deploying apps to Google Play and App Store",
+    "duration": "100 min",
+    "order": 5
+  }
 ]

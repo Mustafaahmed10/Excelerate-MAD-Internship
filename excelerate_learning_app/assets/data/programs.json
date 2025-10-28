@@ -61,5 +61,68 @@
     "enrolledCount": 567,
     "rating": 4.9,
     "featured": false
+  },
+  {
+    "id": "4",
+    "title": "UI/UX Design Essentials",
+    "category": "Design",
+    "difficulty": "Beginner",
+    "duration": "8 weeks",
+    "instructor": "Alex Thompson",
+    "instructorAvatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop",
+    "description": "Learn user-centered design principles, wireframing, prototyping, and creating beautiful user interfaces.",
+    "learningOutcomes": [
+      "Understand UX research methods",
+      "Create wireframes and prototypes",
+      "Design intuitive user interfaces",
+      "Conduct usability testing"
+    ],
+    "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=400&fit=crop",
+    "lessonsCount": 32,
+    "enrolledCount": 1045,
+    "rating": 4.7,
+    "featured": true
+  },
+  {
+    "id": "5",
+    "title": "Business Analytics & Intelligence",
+    "category": "Business",
+    "difficulty": "Intermediate",
+    "duration": "10 weeks",
+    "instructor": "James Wilson",
+    "instructorAvatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
+    "description": "Transform data into actionable insights. Learn Excel, Power BI, and business intelligence strategies.",
+    "learningOutcomes": [
+      "Master advanced Excel techniques",
+      "Create interactive dashboards",
+      "Analyze business metrics",
+      "Present data-driven recommendations"
+    ],
+    "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=400&fit=crop",
+    "lessonsCount": 40,
+    "enrolledCount": 723,
+    "rating": 4.5,
+    "featured": false
+  },
+  {
+    "id": "6",
+    "title": "Mobile App Development",
+    "category": "Technology",
+    "difficulty": "Intermediate",
+    "duration": "14 weeks",
+    "instructor": "Priya Patel",
+    "instructorAvatar": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&h=100&fit=crop",
+    "description": "Build cross-platform mobile applications using React Native. Launch your app on iOS and Android.",
+    "learningOutcomes": [
+      "Develop mobile apps with React Native",
+      "Implement navigation and state management",
+      "Integrate APIs and databases",
+      "Publish apps to app stores"
+    ],
+    "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=400&fit=crop",
+    "lessonsCount": 56,
+    "enrolledCount": 634,
+    "rating": 4.7,
+    "featured": false
   }
 ]

@@ -25,6 +25,9 @@ class ProgramViewModel extends GetxController {
     isLoading.value = false;
   }
 
-  Program? findProgram(String id) => programs.firstWhereOrNull((p) => p.id == id);
-  List<Lesson> lessonsForProgram(String programId) => lessons.where((l) => l.programId == programId).toList();
+  Program? findProgram(String id) =>
+      programs.firstWhereOrNull((p) => p.id == id);
+
+  List<Lesson> lessonsForProgram(String programId) =>
+      lessons.where((l) => l.programId == programId).toList();
 }

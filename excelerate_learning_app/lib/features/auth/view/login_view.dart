@@ -1,5 +1,5 @@
 import 'package:excelerate_learning_app/app/routes/app_routes.dart';
-import 'package:excelerate_learning_app/features/auth/view%20model/auth_view_model.dart';
+import 'package:excelerate_learning_app/features/auth/view_model/auth_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
