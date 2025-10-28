@@ -17,7 +17,7 @@ class AppPages {
       name: Routes.PROGRAM_DETAILS,
       page: () {
         final id = Get.parameters['id']!;
-        return ProgramDetailsScreen(programId: id);
+        return ProgramDetailsScreen();
       },
     ),
     GetPage(

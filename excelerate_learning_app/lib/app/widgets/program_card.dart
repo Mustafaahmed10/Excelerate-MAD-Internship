@@ -1,10 +1,10 @@
+import 'package:excelerate_learning_app/app/routes/app_routes.dart';
 import 'package:excelerate_learning_app/app/utils/app_colors.dart';
 import 'package:excelerate_learning_app/app/utils/app_text_styles.dart';
 import 'package:excelerate_learning_app/app/widgets/hover_card.dart';
 import 'package:excelerate_learning_app/features/home/model/program_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 
 class ProgramCard extends StatelessWidget {
   final Program program;
@@ -13,7 +13,7 @@ class ProgramCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return HoverCard(
-      onTap: () => Get.toNamed('/program/${program.id}'),
+      onTap: () => Get.toNamed(Routes.PROGRAM_DETAILS, arguments: program),
       child: Container(
         decoration: BoxDecoration(
           color: Colors.white,
@@ -30,14 +30,11 @@ class ProgramCard extends StatelessWidget {
                 width: double.infinity,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(12),
-                  child: Image.network(
-                    program.image,
-                    fit: BoxFit.cover,
-                  ),
+                  child: Image.network(program.image, fit: BoxFit.cover),
                 ),
               ),
               const SizedBox(height: 20),
-          
+
               //Category & Difficulty
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -47,7 +44,7 @@ class ProgramCard extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 35),
-          
+
               //Title
               Text(
                 program.title,
@@ -56,7 +53,7 @@ class ProgramCard extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
               ),
               const SizedBox(height: 7),
-          
+
               //Description
               Text(
                 program.description,
@@ -65,21 +62,32 @@ class ProgramCard extends StatelessWidget {
                 overflow: TextOverflow.fade,
               ),
               const SizedBox(height: 25),
-          
+
               //Duration & Lessons Count
               Row(
                 children: [
-                  const Icon(Icons.access_time, size: 16, color: AppColors.purple),
+                  const Icon(
+                    Icons.access_time,
+                    size: 16,
+                    color: AppColors.purple,
+                  ),
                   const SizedBox(width: 4),
                   Text(program.duration, style: AppTextStyles.smallGrey),
                   const SizedBox(width: 12),
-                  const Icon(Icons.menu_book, size: 16, color: AppColors.lightBlue),
+                  const Icon(
+                    Icons.menu_book,
+                    size: 16,
+                    color: AppColors.lightBlue,
+                  ),
                   const SizedBox(width: 4),
-                  Text('${program.lessonsCount} lessons', style: AppTextStyles.smallGrey),
+                  Text(
+                    '${program.lessonsCount} lessons',
+                    style: AppTextStyles.smallGrey,
+                  ),
                 ],
               ),
               const SizedBox(height: 8),
-          
+
               // Rating & Enrolled
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -88,14 +96,20 @@ class ProgramCard extends StatelessWidget {
                     children: [
                       const Icon(Icons.star, size: 16, color: AppColors.yellow),
                       const SizedBox(width: 4),
-                      Text('${program.rating}', style: AppTextStyles.smallblack),
+                      Text(
+                        '${program.rating}',
+                        style: AppTextStyles.smallblack,
+                      ),
                     ],
                   ),
                   Row(
                     children: [
                       const Icon(Icons.people, size: 16, color: AppColors.cian),
                       const SizedBox(width: 4),
-                      Text('${program.enrolledCount} enrolled', style: AppTextStyles.smallGrey),
+                      Text(
+                        '${program.enrolledCount} enrolled',
+                        style: AppTextStyles.smallGrey,
+                      ),
                     ],
                   ),
                 ],

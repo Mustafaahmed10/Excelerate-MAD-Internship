@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   // LIGHT THEME
-  static const Color background = Color(0xFFFAFBFF);
+  static const Color background = Color.fromARGB(255, 250, 251, 255);
   static const Color foreground = Color(0xFF232323);
   static const Color card = Colors.white;
   static const Color cardForeground = Color(0xFF232323);
