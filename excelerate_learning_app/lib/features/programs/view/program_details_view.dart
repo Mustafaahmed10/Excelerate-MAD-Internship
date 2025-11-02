@@ -4,6 +4,8 @@ import 'package:excelerate_learning_app/app/widgets/lesson_tile.dart';
 import 'package:excelerate_learning_app/app/widgets/program_description_section.dart';
 import 'package:excelerate_learning_app/app/widgets/program_header.dart';
 import 'package:excelerate_learning_app/app/widgets/program_stats.dart';
+import 'package:excelerate_learning_app/features/auth/view_model/auth_view_model.dart';
+import 'package:excelerate_learning_app/features/enrollment/view_model/enrollment_view_model.dart';
 import 'package:excelerate_learning_app/features/home/model/program_model.dart';
 import 'package:excelerate_learning_app/features/programs/view_model/program_view_model.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +18,9 @@ class ProgramDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final EnrollmentViewModel enrollVM = Get.find();
+    final AuthViewModel auth = Get.find();
+
     final ProgramViewModel ctrl = Get.find();
     final lessons = ctrl.lessonsForProgram(program.id);
     return Scaffold(
@@ -54,19 +59,37 @@ class ProgramDetailsScreen extends StatelessWidget {
 
                   const SizedBox(height: 24),
                   Center(
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 40,
-                          vertical: 14,
+                    child: Obx(() {
+                      final isEnrolled =
+                          enrollVM.findForProgram(program.id) != null;
+
+                      return ElevatedButton(
+                        onPressed:
+                            isEnrolled
+                                ? null //Disable if already enrolled
+                                : () async {
+                                  await enrollVM.enroll(program.id);
+
+                                  Get.snackbar(
+                                    "Enrolled Successfully",
+                                    "You are now enrolled in ${program.title}",
+                                    snackPosition: SnackPosition.BOTTOM,
+                                  );
+                                },
+                        style: ElevatedButton.styleFrom(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 40,
+                            vertical: 14,
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
                         ),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
+                        child: Text(
+                          isEnrolled ? "Already Enrolled" : "Enroll Now",
                         ),
-                      ),
-                      child: const Text("Enroll Now"),
-                    ),
+                      );
+                    }),
                   ),
                 ],
               ),

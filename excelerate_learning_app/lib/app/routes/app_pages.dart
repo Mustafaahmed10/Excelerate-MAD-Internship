@@ -3,6 +3,7 @@ import 'package:excelerate_learning_app/features/auth/view/login_view.dart';
 import 'package:excelerate_learning_app/features/auth/view/signup_view.dart';
 import 'package:excelerate_learning_app/features/enrollment/view/enrollment_view.dart';
 import 'package:excelerate_learning_app/features/home/view/home_view.dart';
+import 'package:excelerate_learning_app/features/profile/view/profile_screen.dart';
 import 'package:excelerate_learning_app/features/programs/view/program_details_view.dart';
 import 'package:excelerate_learning_app/features/programs/view/program_list_view.dart';
 import 'package:get/get.dart';
@@ -12,7 +13,7 @@ class AppPages {
   static final pages = [
     GetPage(name: Routes.SPLASH, page: () => const SplashScreen()),
     GetPage(name: Routes.LOGIN, page: () => LoginScreen()),
-    GetPage(name: Routes.SIGNUP, page: () => SignupScreen()),
+    GetPage(name: Routes.SIGNUP, page: () => SignUpScreen()),
     GetPage(name: Routes.HOME, page: () => HomeScreen()),
     GetPage(name: Routes.PROGRAMS, page: () => ProgramListScreen()),
     GetPage(
@@ -36,7 +37,7 @@ class AppPages {
     //     return FeedbackScreen(programId: id);
     //   },
     // ),
-    // GetPage(name: Routes.PROFILE, page: () => ProfileScreen()),
+    GetPage(name: Routes.PROFILE, page: () => ProfileScreen()),
     // GetPage(name: Routes.ADMIN, page: () => AdminDashboardScreen()),
   ];
 }

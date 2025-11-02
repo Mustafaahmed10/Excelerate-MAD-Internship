@@ -23,12 +23,10 @@ class AuthService {
       id: 'user-${DateTime.now().millisecondsSinceEpoch}',
       name: name,
       email: email,
-      password: password,    //save password
+      password: password,  
       role: 'learner',
-      avatar: null,
+      avatar: null, enrollments: [],
     );
-
-    // NOTE: Mock only → not saved to file unless we use GetStorage persistence
     return newUser;
   }
 }

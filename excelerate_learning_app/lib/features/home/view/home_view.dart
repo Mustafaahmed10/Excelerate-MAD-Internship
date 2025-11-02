@@ -26,10 +26,6 @@ class HomeScreen extends StatelessWidget {
             icon: const Icon(Icons.person_outline),
             onPressed: () => Get.toNamed(Routes.PROFILE),
           ),
-          // IconButton(
-          //   icon: const Icon(Icons.admin_panel_settings_outlined),
-          //   onPressed: () => Get.toNamed(Routes.ADMIN),
-          // ),
         ],
       ),
       body: Obx(() {
