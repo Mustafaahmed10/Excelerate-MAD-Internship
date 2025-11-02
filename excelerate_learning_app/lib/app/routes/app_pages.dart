@@ -1,3 +1,4 @@
+import 'package:excelerate_learning_app/app/screens/splash_screen.dart';
 import 'package:excelerate_learning_app/features/auth/view/login_view.dart';
 import 'package:excelerate_learning_app/features/auth/view/signup_view.dart';
 import 'package:excelerate_learning_app/features/enrollment/view/enrollment_view.dart';
@@ -9,6 +10,7 @@ import 'app_routes.dart';
 
 class AppPages {
   static final pages = [
+    GetPage(name: Routes.SPLASH, page: () => const SplashScreen()),
     GetPage(name: Routes.LOGIN, page: () => LoginScreen()),
     GetPage(name: Routes.SIGNUP, page: () => SignupScreen()),
     GetPage(name: Routes.HOME, page: () => HomeScreen()),
@@ -16,7 +18,7 @@ class AppPages {
     GetPage(
       name: Routes.PROGRAM_DETAILS,
       page: () {
-        final id = Get.parameters['id']!;
+        //final id = Get.parameters['id']!;
         return ProgramDetailsScreen();
       },
     ),

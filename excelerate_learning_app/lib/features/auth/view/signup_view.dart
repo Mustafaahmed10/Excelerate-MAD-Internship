@@ -23,10 +23,10 @@ class SignupScreen extends StatelessWidget {
             const SizedBox(height: 12),
             Obx(() => ElevatedButton(
               onPressed: auth.isLoading.value ? null : () async {
-                final u = await auth.signup(nameCtrl.text.trim(), emailCtrl.text.trim());
-                if (u != null) {
-                  Get.offAllNamed(Routes.HOME);
-                }
+                // final u = await auth.signup(nameCtrl.text.trim(), emailCtrl.text.trim());
+                // if (u != null) {
+                //   Get.offAllNamed(Routes.HOME);
+                // }
               },
               child: auth.isLoading.value ? const CircularProgressIndicator(color: Colors.white) : const Text('Create Account'),
             )),
