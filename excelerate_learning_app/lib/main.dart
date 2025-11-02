@@ -8,7 +8,7 @@ import 'app/routes/app_pages.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  InitialBindings().dependencies(); // Initial GetX controllers
+  InitialBindings().dependencies();
  await GetStorage.init();
   runApp(MyApp());
 }
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: AppConstants.appName,
       debugShowCheckedModeBanner: false,
-      initialRoute: Routes.LOGIN,
+      initialRoute: Routes.SPLASH,
       getPages: AppPages.pages,
     );
   }

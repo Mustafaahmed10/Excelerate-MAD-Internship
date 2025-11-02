@@ -14,24 +14,28 @@ class AuthViewModel extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    _tryAutoLogin();
+    tryAutoLogin();
   }
 
-  // ✅ AUTO LOGIN (stored email + password)
-  void _tryAutoLogin() async {
+  // AUTO LOGIN (stored email + password)
+  void tryAutoLogin() async {
     final email = box.read("logged_in_email");
     final password = box.read("logged_in_password");
 
     if (email != null && password != null) {
-      final u = await _service.login(email, password);
-      if (u != null) {
-        user.value = u;
+      final existingUser = await _service.login(email, password);
+      if (existingUser != null) {
+        user.value = existingUser;
         Get.offAllNamed(Routes.HOME);
+      } else {
+        Get.offAllNamed(Routes.LOGIN);
       }
+    } else {
+      Get.offAllNamed(Routes.LOGIN);
     }
   }
 
-  // ✅ LOGIN with email + password
+  //LOGIN with email + password
   Future<bool> login(String email, String password) async {
     isLoading.value = true;
 
@@ -41,7 +45,7 @@ class AuthViewModel extends GetxController {
     if (u != null) {
       user.value = u;
 
-      // ✅ Save session
+      //Save session
       box.write("logged_in_email", email);
       box.write("logged_in_password", password);
 
@@ -50,7 +54,7 @@ class AuthViewModel extends GetxController {
     return false;
   }
 
-  // ✅ LOGOUT
+  //LOGOUT
   Future<void> logout() async {
     box.remove("logged_in_email");
     box.remove("logged_in_password");
@@ -59,11 +63,11 @@ class AuthViewModel extends GetxController {
     Get.offAllNamed(Routes.LOGIN);
   }
 
-  // ✅ SIGNUP with password
+  //SIGNUP with password
   Future<UserModel> signup(String name, String email, String password) async {
     final newUser = await _service.signup(name, email, password);
 
-    // Optional: save signup user as logged in
+    // save signup user as logged in
     user.value = newUser;
 
     box.write("logged_in_email", email);
