@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "72591161749",
+    "project_id": "excelerate-app-b0bb2",
+    "storage_bucket": "excelerate-app-b0bb2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:72591161749:android:53e431eb52734eda0c9e9c",
+        "android_client_info": {
+          "package_name": "com.example.excelerate_learning_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRhfgi1Rv-6F46ClrtiuQDXPoGT-fMqjc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
